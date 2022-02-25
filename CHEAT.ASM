@@ -6,11 +6,11 @@ MODEL SMALL, PASCAL
 
 MACRO MakeCString Id, Msg
   IFB <Id>
-    DISPLAY "Bisogna specificare il nome della stringa in MakeCString"
+    DISPLAY "Must specify the Id of string in MakeCString"
     ERR
   ELSE
     IFB <Msg>
-      DISPLAY "Bisogna passare la stringa a MakeCString"
+      DISPLAY "Must specify the Msg in MakeCString"
       ERR
     ELSE
       Id DB &Msg&
@@ -21,11 +21,11 @@ ENDM  MakeCString
 MACRO MakePascalString Id, Msg
   LOCAL EndStr
   IFB <Id>
-    DISPLAY "Bisogna specificare il nome della stringa in MakePascalString"
+    DISPLAY "Must specify the Id of string in MakePascalString"
     ERR
   ELSE
     IFB <Msg>
-      DISPLAY "Bisogna passare la stringa a MakePascalString"
+      DISPLAY "Must specify the Msg in MakePascalString"
       ERR
     ELSE
       Id DB EndStr - Id - 1, &Msg&
@@ -239,7 +239,6 @@ PROC  RunExecutable
   RETF
   ; --- Child program will return here when it terminates ---
 @ReturnPoint:
-  ; Restore the DS, SS, SP and BP registers to satisfy Turbo Pascal
   MOV  AX, @data
   MOV  DS, AX
   MOV  BP, [SaveBP]
