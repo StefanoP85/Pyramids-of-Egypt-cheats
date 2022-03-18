@@ -8,5 +8,5 @@ You can find a reference here: https://rome.ro/subnodule.
 
 The game is very hard; I used some debugging in real mode software, using Turbo Debugger, and I found out how to cheat, becoming invulnerable to the snakes.
 The cheat is a "patcher program": a program written in Turbo Pascal, with some assembly routines, that loads the game into memory, patch a single instruction,
-a RET instruction, with hex code C3, in the right place, and that bypasses the collision detection.
+a RET instruction, with hex code C3, in the right place, and that bypasses the collision detection; I translated it into Turbo Assembler in Ideal mode syntax.
 I created also a QBasic program, that displays the 30 levels of the game.
